@@ -1,4 +1,38 @@
 <hello name="{{ name }}"></hello>
 <p>
-  Belajar Angular Pertama
+  <!-- Belajar Angular Pertama
+  <br/><br/>
+
+  {{"Contoh menulis di angular"}}
+  25 + 25 = {{25+25}}
+
+  <br/><br/>
+  <input [(ngModel)] = "a" type = "text"> *
+  <input [(ngModel)] = "b" type = "text"> 
+  {{a * b}}
 </p>
+
+<div *ngFor = "let fruit of item ;let i = index">
+  {{i+1}}. {{fruit.nama}} - {{fruit.harga | currency : 'Rp'}}
+</div> -->
+
+<!-- <div *ngFor = "let data of itemArr">
+  {{data}}
+</div> -->
+
+<p *ngIf="show">Show this only if "show" is true</p>
+
+<ng-template
+  *ngIf = "show;then showBlock;else notShowBlock">
+</ng-template>
+
+<ng-template #showBlock>
+  <p>Show is true</p>
+</ng-template>
+
+<ng-template #notShowBlock>
+  <p>Show is false</p>
+</ng-template>
+
+<button (click) = "klikButton()">Press me</button>
+{{pesan}}
